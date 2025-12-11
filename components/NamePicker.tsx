@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { RotateCcw, Sparkles, ChevronDown, ChevronUp, Plus, X } from 'lucide-react';
-import Image from 'next/image';
 
 export default function NamePicker() {
   const initialNames = [
@@ -246,12 +245,10 @@ export default function NamePicker() {
               {/* Inner container */}
               <div className="absolute inset-1 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-orange-500/20"></div>
-                <Image 
-                  src="/174931.jpg" 
+                <img 
+                  src="./174931.jpg"
                   alt="Logo" 
-                  fill
-                  className="object-contain relative z-10 p-2"
-                  priority
+                  className="w-full h-full object-contain relative z-10 p-2"
                 />
               </div>
               {/* Corner accents */}
