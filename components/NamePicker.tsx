@@ -246,7 +246,7 @@ export default function NamePicker() {
               <div className="absolute inset-1 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-orange-500/20"></div>
                 <img 
-                  src="/174931.jpg"
+                  src="./174931.jpg"
                   alt="Logo" 
                   className="w-full h-full object-contain relative z-10 p-2"
                 />

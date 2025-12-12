@@ -51,4 +51,33 @@
     opacity: 0;
   }
 }
-/* Custom animations are now in tailwind.config.js */
+/* Loading animation */
+@keyframes loading-smooth {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-loading-smooth {
+  animation: loading-smooth 2s ease-in-out infinite;
+}
+
+/* Shine effect */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shine {
+  animation: shine 2s ease-in-out infinite;
+}
