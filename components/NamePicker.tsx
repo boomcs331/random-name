@@ -276,7 +276,7 @@ export default function NamePicker() {
             {/* Location and status */}
             <div className="bg-gradient-to-r from-gray-800/60 via-gray-700/60 to-gray-800/60 border border-yellow-400/30 rounded-xl p-4 backdrop-blur-sm">
               <p className="text-yellow-300 text-lg font-bold mb-2 tracking-wide">
-                📍 ณ เดอะเโรน่า แอท ทับลาน
+                📍 ณ เดอะเวโรน่า แอท ทับลาน
               </p>
               <div className="flex justify-center items-center gap-6 text-sm text-gray-300">
                 <div className="flex items-center gap-2">
