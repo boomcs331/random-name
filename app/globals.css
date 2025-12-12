@@ -51,3 +51,38 @@
     opacity: 0;
   }
 }
+/* Beautiful progress bar animations */
+@keyframes loading-smooth {
+  0% {
+    width: 0%;
+  }
+  30% {
+    width: 45%;
+  }
+  60% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-loading-smooth {
+  animation: loading-smooth 3s ease-in-out infinite;
+}
+
+.animate-shine {
+  animation: shine 2s ease-in-out infinite;
+}

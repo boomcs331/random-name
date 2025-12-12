@@ -246,7 +246,7 @@ export default function NamePicker() {
               <div className="absolute inset-1 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-orange-500/20"></div>
                 <img 
-                  src="./174931.jpg"
+                  src="/174931.jpg"
                   alt="Logo" 
                   className="w-full h-full object-contain relative z-10 p-2"
                 />
@@ -350,9 +350,63 @@ export default function NamePicker() {
                     🎰 กรุณารอสักครู่... 🎰
                   </div>
                 </div>
-                {/* Progress bar */}
-                <div className="w-full bg-gray-700 rounded-full h-2 max-w-md mx-auto">
-                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full animate-pulse" style={{width: '70%'}}></div>
+                {/* Beautiful progress bar */}
+                <div className="space-y-4">
+                  <div className="relative w-full max-w-lg mx-auto">
+                    {/* Outer glow container */}
+                    <div className="relative p-1 rounded-full bg-gradient-to-r from-yellow-400/20 via-orange-400/20 to-red-400/20 animate-pulse">
+                      {/* Progress track */}
+                      <div className="relative bg-gray-900 rounded-full h-6 border-2 border-gray-700 overflow-hidden shadow-2xl">
+                        {/* Animated background pattern */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 animate-pulse"></div>
+                        
+                        {/* Main progress bar */}
+                        <div className="relative h-full bg-gradient-to-r from-yellow-400 via-orange-400 via-yellow-300 to-orange-500 rounded-full animate-loading-smooth shadow-lg">
+                          {/* Top highlight */}
+                          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-200 via-white to-orange-200 rounded-full opacity-60"></div>
+                          
+                          {/* Moving shine effect */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 via-transparent to-transparent animate-shine rounded-full"></div>
+                          
+                          {/* Particle effects */}
+                          <div className="absolute inset-0 overflow-hidden rounded-full">
+                            {[...Array(3)].map((_, i) => (
+                              <div
+                                key={i}
+                                className="absolute w-1 h-1 bg-white rounded-full animate-bounce opacity-80"
+                                style={{
+                                  left: `${20 + i * 30}%`,
+                                  top: '50%',
+                                  transform: 'translateY(-50%)',
+                                  animationDelay: `${i * 0.2}s`,
+                                  animationDuration: '1s'
+                                }}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Progress text */}
+                    <div className="flex justify-center mt-3">
+                      <div className="bg-black/50 backdrop-blur-sm border border-yellow-400/30 rounded-lg px-4 py-2">
+                        <div className="text-yellow-300 text-sm font-medium flex items-center gap-2">
+                          <div className="flex space-x-1">
+                            <div className="w-1 h-1 bg-yellow-400 rounded-full animate-bounce" style={{animationDelay: '0s'}}></div>
+                            <div className="w-1 h-1 bg-orange-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+                            <div className="w-1 h-1 bg-red-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                          </div>
+                          <span>กำลังสุ่มรายชื่อ</span>
+                          <div className="flex space-x-1">
+                            <div className="w-1 h-1 bg-red-400 rounded-full animate-bounce" style={{animationDelay: '0.3s'}}></div>
+                            <div className="w-1 h-1 bg-orange-400 rounded-full animate-bounce" style={{animationDelay: '0.4s'}}></div>
+                            <div className="w-1 h-1 bg-yellow-400 rounded-full animate-bounce" style={{animationDelay: '0.5s'}}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             ) : currentName ? (
